@@ -64,12 +64,6 @@ repos:
     rev: "7.1.1"
     hooks:
       - id: flake8
-  # Black for formatting Jupyter files
-  - repo: https://github.com/nbQA-dev/nbQA
-    rev: 1.9.1
-    hooks:
-      - id: nbqa-black
-        additional_dependencies: [jupytext]
   # ShellCheck hook for linting shell scripts
   - repo: https://github.com/shellcheck-py/shellcheck-py
     rev: "v0.10.0.1"
