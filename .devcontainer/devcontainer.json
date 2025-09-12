@@ -6,26 +6,25 @@
     "vscode": {
       "extensions": [
         "DavidAnson.vscode-markdownlint",
-        "MindpathTechnologyLimited.code-error-lens",
-        "SonarSource.sonarlint-vscode",
         "Tyriar.sort-lines",
         "bradzacher.vscode-copy-filename",
+        "charliermarsh.ruff",
         "foxundermoon.shell-format",
         "ms-azuretools.vscode-docker",
-        "streetsidesoftware.code-spell-checker"
+        "ms-python.autopep8",
+        "ms-python.black-formatter",
+        "ms-python.debugpy",
+        "ms-python.flake8",
+        "ms-python.gather",
+        "ms-python.isort",
+        "ms-python.mypy-type-checker",
+        "ms-python.pylint",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "streetsidesoftware.code-spell-checker",
+        "usernamehw.errorlens"
       ],
       "settings": {
-        "[dockercompose]": {
-          "editor.autoIndent": "advanced",
-          "editor.insertSpaces": true,
-          "editor.quickSuggestions": {
-            "comments": false,
-            "other": true,
-            "strings": true
-          },
-          "editor.tabSize": 2,
-          "files.eol": "\n"
-        },
         "[dockerfile]": {
           "editor.quickSuggestions": {
             "strings": true
@@ -70,7 +69,7 @@
       }
     }
   },
-  "image": "mcr.microsoft.com/devcontainers/javascript-node",
+  "image": "mcr.microsoft.com/devcontainers/python:latest",
   "mounts": [
     "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached"
   ],
