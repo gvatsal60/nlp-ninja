@@ -41,10 +41,7 @@ ENV UV_CACHE=none
 ENV UV_COMPILE_BYTECODE=1
 
 # Install `uv`
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
-
-# Install Python packages
-RUN uv sync
+RUN pip install uv
 
 # Switch to non-root user
 ARG USERNAME=vscode
