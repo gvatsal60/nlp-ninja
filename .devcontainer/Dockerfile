@@ -1,0 +1,67 @@
+# ##########################################################################
+# File: Dockerfile
+# Author: Vatsal Gupta
+# Date: 12-Sep-2025
+# Description: Dockerfile for setting up a Python development environment
+#              using Microsoft's Dev Containers as the base image.
+#              It installs `uv` for managing Python packages and sets up
+#              the environment for development.
+# ##########################################################################
+
+# ##########################################################################
+# License
+# ##########################################################################
+# This Dockerfile is licensed under the MIT License.
+# License information should be updated as necessary.
+# ##########################################################################
+
+# ##########################################################################
+# Base Image
+# ##########################################################################
+FROM mcr.microsoft.com/devcontainers/python:latest AS base
+
+# ##########################################################################
+# Maintainer
+# ##########################################################################
+LABEL maintainer="Vatsal Gupta"
+
+# ##########################################################################
+# Install Dependencies
+# ##########################################################################
+
+# Avoid warnings by switching to noninteractive
+ENV DEBIAN_FRONTEND=noninteractive
+# Disabled Telemetry
+ENV ANONYMIZED_TELEMETRY=False
+# Set the `uv` link mode to copy
+ENV UV_LINK_MODE=copy
+# Set the `uv` cache to none
+ENV UV_CACHE=none
+# Enable bytecode compilation
+ENV UV_COMPILE_BYTECODE=1
+
+# Install `uv`
+RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# Install Python packages
+RUN uv sync
+
+# Switch to non-root user
+ARG USERNAME=vscode
+USER ${USERNAME}
+
+# ##########################################################################
+# Copy Files
+# ##########################################################################
+
+# ##########################################################################
+# Set Working Directory
+# ##########################################################################
+
+# ##########################################################################
+# Expose Port
+# ##########################################################################
+
+# ##########################################################################
+# Command to Run
+# ##########################################################################
