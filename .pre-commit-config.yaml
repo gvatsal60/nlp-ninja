@@ -91,6 +91,11 @@ repos:
     rev: "v0.17.2"
     hooks:
       - id: yamlfmt
+  # Nbstripout for stripping output from Jupyter Notebooks
+  - repo: https://github.com/kynan/nbstripout
+    rev: "0.8.1"
+    hooks:
+      - id: nbstripout
   # Codespell for detecting common misspellings in code
   - repo: https://github.com/codespell-project/codespell
     rev: "v2.4.1"
