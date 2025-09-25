@@ -1,5 +1,5 @@
-ipykernel
-nltk
-numpy
-pandas
-spacy
+ipykernel>=6.30.1
+nltk>=3.9.1
+numpy>=2.3.3
+pandas>=2.3.2
+spacy>=3.8.7
