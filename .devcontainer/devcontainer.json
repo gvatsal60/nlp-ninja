@@ -2,7 +2,7 @@
   "capAdd": [
     "SYS_PTRACE"
   ],
-    "containerEnv": {
+  "containerEnv": {
     "ANONYMIZED_TELEMETRY": "false",
     "DEBIAN_FRONTEND": "noninteractive",
     "PIP_NO_CACHE_DIR": "1",
