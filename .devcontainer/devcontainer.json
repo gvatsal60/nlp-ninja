@@ -1,11 +1,15 @@
 {
-  "build": {
-    "context": "..",
-    "dockerfile": "Dockerfile"
-  },
   "capAdd": [
     "SYS_PTRACE"
   ],
+    "containerEnv": {
+    "ANONYMIZED_TELEMETRY": "false",
+    "DEBIAN_FRONTEND": "noninteractive",
+    "PIP_NO_CACHE_DIR": "1",
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "STREAMLIT_BROWSER_GATHERUSAGESTATS": "false",
+    "UV_LINK_MODE": "copy"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -73,6 +77,7 @@
       }
     }
   },
+  "image": "mcr.microsoft.com/devcontainers/python:3.13",
   "mounts": [
     "source=${localWorkspaceFolder}/snippets,target=${containerWorkspaceFolder}/.vscode,type=bind,consistency=cached"
   ],
