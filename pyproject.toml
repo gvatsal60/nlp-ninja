@@ -9,5 +9,5 @@ dependencies = [
     "nltk>=3.9.4",
     "numpy>=2.4.4",
     "pandas>=3.0.2",
-    "spacy>=3.8.7",
+    "spacy>=3.8.14",
 ]
