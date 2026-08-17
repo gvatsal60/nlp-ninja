@@ -44,19 +44,19 @@ repos:
       - id: python-use-type-annotations
   # Runs mypy to check Python type annotations.
   - repo: https://github.com/pre-commit/mirrors-mypy
-    rev: "v2.3.0"
+    rev: "v2.3.1"
     hooks:
       - id: mypy
   # Ruff for linting and formatting Python files
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.16.2"
+    rev: "v0.16.3"
     hooks:
       - id: ruff-check
         args: [--fix]
       - id: ruff-format
   # isort for sorting Python imports
   - repo: https://github.com/pycqa/isort
-    rev: "9.0.0b2"
+    rev: "9.0.0b5"
     hooks:
       - id: isort
   # Flake8 for linting Python files
