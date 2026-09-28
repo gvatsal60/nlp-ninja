@@ -49,19 +49,19 @@ repos:
       - id: mypy
   # Ruff for linting and formatting Python files
   - repo: https://github.com/astral-sh/ruff-pre-commit
-    rev: "v0.16.8"
+    rev: "v0.16.9"
     hooks:
       - id: ruff-check
         args: [--fix]
       - id: ruff-format
   # isort for sorting Python imports
   - repo: https://github.com/pycqa/isort
-    rev: "9.0.1"
+    rev: "9.0.2"
     hooks:
       - id: isort
   # Flake8 for linting Python files
   - repo: https://github.com/pycqa/flake8
-    rev: "7.3.0"
+    rev: "7.4.1"
     hooks:
       - id: flake8
   # shfmt hook for formatting shell scripts
